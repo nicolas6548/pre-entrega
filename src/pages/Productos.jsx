@@ -34,16 +34,16 @@ function Productos()
   return (
     <>
       <ul className="lista-productos">
-        {productos.map((productos) => (
-          <li key={productos.id}>
+        {productos.map((producto) => (
+          <li key={producto.id}>
             <h2>
-              <strong>{productos.name}</strong>
+              <strong>{producto.name}</strong>
             </h2>            
             <br />
-            PRECIO: ${productos.price}
+            PRECIO: ${producto.price}
             <br />
-            <img src={productos.avatar} alt={productos.name} />
-            <Link to= {`/productos/${productos.id}`} state={{productos}}><button>VER PRODUCTO</button> </Link>
+            <img src={producto.avatar} alt={producto.name} />
+            <Link to= {`/productos/${producto.id}`} state={{producto}}><button>VER PRODUCTO</button> </Link>
           </li>
         ))}
       </ul>
